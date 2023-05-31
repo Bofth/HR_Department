@@ -38,7 +38,7 @@ namespace HR_department.Models
 
         public override string ToString()
         {
-            return $"{PassNum}, {Name}, {Surname}, {Age}, {Education}, {Specialization}, {Position}, {Salary}, {EntryIntoCompany.ToShortDateString()}, {LastAppointment.ToShortDateString()}";
+            return $"{PassNum},      {Name},     {Surname},     {Age},       {Education},   {Specialization},     {Position},    {Salary},      {EntryIntoCompany.ToShortDateString()},         {LastAppointment.ToShortDateString()}";
         }
     }
 }

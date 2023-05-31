@@ -11,7 +11,7 @@ namespace HR_department
     public partial class Form_Info : Form
     {
         private Point lastPoint;
-        private readonly List<Employee> employees;
+        private List<Employee> employees;
         public Form_Info()
         {
             InitializeComponent();
@@ -55,6 +55,11 @@ namespace HR_department
         private void button4_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ListOfEmployers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

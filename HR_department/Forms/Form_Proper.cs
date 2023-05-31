@@ -8,7 +8,6 @@ namespace HR_department
     {
         private Point lastPoint;
 
-
         public Form_Proper()
         {
             InitializeComponent();

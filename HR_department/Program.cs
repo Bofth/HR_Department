@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HR_department.Models;
+using System;
 using System.Windows.Forms;
 
 namespace HR_department

@@ -8,7 +8,7 @@ namespace HR_department.Data
 {
     public static class Serialization
     {
-        private const string DATA_PATH = "C:\\Users\\Denis\\Desktop\\Bla\\rep\\HR_Department-main\\HR_department\\Data\\DataOfEmployee.xml";
+        private const string DATA_PATH = "C:\\Users\\Denis\\Desktop\\Bla\\rep\\HR_department\\Data\\DataOfEmployee.xml";
 
         public static void SerializeObjects(List<Employee> employees)
         {
