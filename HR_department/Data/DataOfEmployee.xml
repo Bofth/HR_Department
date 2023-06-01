@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<ArrayOfEmployee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Employee>
+    <Name>Іван</Name>
+    <Surname>Петров</Surname>
+    <Age>30</Age>
+    <PassNum>12345</PassNum>
+    <Education>Середня</Education>
+    <Specialization>Розробка</Specialization>
+    <Salary>5000</Salary>
+    <Position>Розробник програмного забезпечення</Position>
+    <EntryIntoCompany>2015-05-01T00:00:00</EntryIntoCompany>
+    <LastAppointment>2022-01-15T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>Жанна</Name>
+    <Surname>Сміт</Surname>
+    <Age>28</Age>
+    <PassNum>67890</PassNum>
+    <Education>Середня</Education>
+    <Specialization>Маркетинг</Specialization>
+    <Salary>4000</Salary>
+    <Position>Маркетинговий спеціаліст</Position>
+    <EntryIntoCompany>2016-08-10T00:00:00</EntryIntoCompany>
+    <LastAppointment>2021-12-03T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>Давид</Name>
+    <Surname>Джонсон</Surname>
+    <Age>35</Age>
+    <PassNum>54321</PassNum>
+    <Education>Середня</Education>
+    <Specialization>Біохімія</Specialization>
+    <Salary>6000</Salary>
+    <Position>Науковець</Position>
+    <EntryIntoCompany>2014-03-15T00:00:00</EntryIntoCompany>
+    <LastAppointment>2023-05-20T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>Емілія</Name>
+    <Surname>Браун</Surname>
+    <Age>32</Age>
+    <PassNum>98765</PassNum>
+    <Education>Середня</Education>
+    <Specialization>Дизайн</Specialization>
+    <Salary>4500</Salary>
+    <Position>Графічний дизайнер</Position>
+    <EntryIntoCompany>2017-10-05T00:00:00</EntryIntoCompany>
+    <LastAppointment>2022-09-08T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>Михайло</Name>
+    <Surname>Вільсон</Surname>
+    <Age>40</Age>
+    <PassNum>13579</PassNum>
+    <Education>Бакалаврат</Education>
+    <Specialization>Фінанси</Specialization>
+    <Salary>5500</Salary>
+    <Position>Фінансовий аналітик</Position>
+    <EntryIntoCompany>2010-12-01T00:00:00</EntryIntoCompany>
+    <LastAppointment>2021-07-25T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>Олівія</Name>
+    <Surname>Тейлор</Surname>
+    <Age>27</Age>
+    <PassNum>24680</PassNum>
+    <Education>Бакалаврат</Education>
+    <Specialization>Розробка</Specialization>
+    <Salary>3800</Salary>
+    <Position>Асистент з управління персоналом</Position>
+    <EntryIntoCompany>2019-04-12T00:00:00</EntryIntoCompany>
+    <LastAppointment>2023-02-18T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>Вільям</Name>
+    <Surname>Кларк</Surname>
+    <Age>33</Age>
+    <PassNum>86420</PassNum>
+    <Education>Професор</Education>
+    <Specialization>Продажі</Specialization>
+    <Salary>4200</Salary>
+    <Position>Представник з продажу</Position>
+    <EntryIntoCompany>2013-07-20T00:00:00</EntryIntoCompany>
+    <LastAppointment>2022-11-10T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>Софія</Name>
+    <Surname>Андерсон</Surname>
+    <Age>29</Age>
+    <PassNum>11111</PassNum>
+    <Education>Магістратура</Education>
+    <Specialization>Продажі</Specialization>
+    <Salary>4800</Salary>
+    <Position>Аналітик даних</Position>
+    <EntryIntoCompany>2016-02-08T00:00:00</EntryIntoCompany>
+    <LastAppointment>2023-03-27T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>Яків</Name>
+    <Surname>Томас</Surname>
+    <Age>31</Age>
+    <PassNum>99999</PassNum>
+    <Education>Середня</Education>
+    <Specialization>Маркетинг</Specialization>
+    <Salary>5200</Salary>
+    <Position>Менеджер з операціями</Position>
+    <EntryIntoCompany>2014-09-18T00:00:00</EntryIntoCompany>
+    <LastAppointment>2022-08-05T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>Ава</Name>
+    <Surname>Робертс</Surname>
+    <Age>26</Age>
+    <PassNum>77777</PassNum>
+    <Education>Магістратура</Education>
+    <Specialization>Дизайн</Specialization>
+    <Salary>4000</Salary>
+    <Position>Спеціаліст з публічних відносин</Position>
+    <EntryIntoCompany>2020-01-10T00:00:00</EntryIntoCompany>
+    <LastAppointment>2023-04-30T00:00:00</LastAppointment>
+  </Employee>
+</ArrayOfEmployee>
