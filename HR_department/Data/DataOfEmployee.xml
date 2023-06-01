@@ -73,42 +73,6 @@
     <LastAppointment>2023-02-18T00:00:00</LastAppointment>
   </Employee>
   <Employee>
-    <Name>Вільям</Name>
-    <Surname>Кларк</Surname>
-    <Age>33</Age>
-    <PassNum>86420</PassNum>
-    <Education>Професор</Education>
-    <Specialization>Продажі</Specialization>
-    <Salary>4200</Salary>
-    <Position>Представник з продажу</Position>
-    <EntryIntoCompany>2013-07-20T00:00:00</EntryIntoCompany>
-    <LastAppointment>2022-11-10T00:00:00</LastAppointment>
-  </Employee>
-  <Employee>
-    <Name>Софія</Name>
-    <Surname>Андерсон</Surname>
-    <Age>29</Age>
-    <PassNum>11111</PassNum>
-    <Education>Магістратура</Education>
-    <Specialization>Аналіз даних</Specialization>
-    <Salary>4800</Salary>
-    <Position>Аналітик даних</Position>
-    <EntryIntoCompany>2016-02-08T00:00:00</EntryIntoCompany>
-    <LastAppointment>2023-03-27T00:00:00</LastAppointment>
-  </Employee>
-  <Employee>
-    <Name>Яків</Name>
-    <Surname>Томас</Surname>
-    <Age>31</Age>
-    <PassNum>99999</PassNum>
-    <Education>Середня</Education>
-    <Specialization>Управління операціями</Specialization>
-    <Salary>5200</Salary>
-    <Position>Менеджер з операціями</Position>
-    <EntryIntoCompany>2014-09-18T00:00:00</EntryIntoCompany>
-    <LastAppointment>2022-08-05T00:00:00</LastAppointment>
-  </Employee>
-  <Employee>
     <Name>Ава</Name>
     <Surname>Робертс</Surname>
     <Age>26</Age>
@@ -119,5 +83,17 @@
     <Position>Спеціаліст з публічних відносин</Position>
     <EntryIntoCompany>2020-01-10T00:00:00</EntryIntoCompany>
     <LastAppointment>2023-04-30T00:00:00</LastAppointment>
+  </Employee>
+  <Employee>
+    <Name>івап</Name>
+    <Surname>віапів</Surname>
+    <Age>345</Age>
+    <PassNum>345</PassNum>
+    <Education>Бакалаврат</Education>
+    <Specialization>івав</Specialization>
+    <Salary>234</Salary>
+    <Position>ваіп</Position>
+    <EntryIntoCompany>2000-05-12T00:00:00</EntryIntoCompany>
+    <LastAppointment>2006-06-12T00:00:00</LastAppointment>
   </Employee>
 </ArrayOfEmployee>

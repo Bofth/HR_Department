@@ -50,19 +50,23 @@ namespace HR_department
         {
             if (int.TryParse(textBox1.Text, out int maxAge)) // Отримуємо максимальний вік з текстового поля
             {
-                checkedListBox1.Items.Clear(); // Очищаємо список перед пошуком
-
-                foreach (Employee employee in employees)
-                {
-                    if (employee.Age >= maxAge)
-                    {
-                        _ = checkedListBox1.Items.Add(employee.ToString()); // Додаємо працівника до списку
-                    }
-                }
+                Updatethis(maxAge);
             }
             else
             {
                 _ = MessageBox.Show("Введіть коректне значення для максимального віку!");
+            }
+        }
+        private void Updatethis(int maxAge)
+        {
+            checkedListBox1.Items.Clear(); // Очищаємо список перед пошуком
+
+            foreach (Employee employee in employees)
+            {
+                if (employee.Age >= maxAge)
+                {
+                    _ = checkedListBox1.Items.Add(employee.ToString()); // Додаємо працівника до списку
+                }
             }
         }
 
@@ -97,6 +101,7 @@ namespace HR_department
 
                 Serialization.SerializeObjects(employees);
                 _ = MessageBox.Show("Вибрані працівники були звільнені!");
+                Updatethis(int.Parse(textBox1.Text));
             }
             else
             {

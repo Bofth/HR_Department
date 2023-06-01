@@ -39,39 +39,59 @@ namespace HR_department
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Education enumValue = (Education)Enum.Parse(typeof(Education), comboBox1.Text);
-
-            DialogResult result = MessageBox.Show("Ви впевнені?", "Підтвердження", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            Education enumValue;
+            if (Enum.TryParse(comboBox1.Text, out enumValue))
             {
+                DialogResult result = MessageBox.Show("Ви впевнені?", "Підтвердження", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                        string.IsNullOrWhiteSpace(textBox2.Text) ||
+                        string.IsNullOrWhiteSpace(textBox3.Text) ||
+                        string.IsNullOrWhiteSpace(textBox5.Text) ||
+                        string.IsNullOrWhiteSpace(textBox4.Text) ||
+                        string.IsNullOrWhiteSpace(textBox6.Text) ||
+                        string.IsNullOrWhiteSpace(textBox7.Text) ||
+                        string.IsNullOrWhiteSpace(textBox8.Text) ||
+                        string.IsNullOrWhiteSpace(textBox9.Text))
+                    {
+                        MessageBox.Show("Не усі поля заповнені", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    try
+                    {
+                        ChengetEmployee.Name = textBox1.Text;
+                        ChengetEmployee.Surname = textBox2.Text;
+                        ChengetEmployee.PassNum = int.Parse(textBox3.Text);
+                        ChengetEmployee.Education = enumValue;
+                        ChengetEmployee.Age = int.Parse(textBox5.Text);
+                        ChengetEmployee.Specialization = textBox4.Text;
+                        ChengetEmployee.Position = textBox6.Text;
+                        ChengetEmployee.Salary = int.Parse(textBox7.Text);
+                        ChengetEmployee.EntryIntoCompany = DateTime.Parse(textBox8.Text);
+                        ChengetEmployee.LastAppointment = DateTime.Parse(textBox9.Text);
+
+                        Serialization.SerializeObject(ChengetEmployee);
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Введено недопустиме значення у поле. Перевірте будь ласка коректність введення ваших даних.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Сталася помилка: {ex.Message}", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {
-                return;
+                MessageBox.Show("Недопустиме значення в полі освіта.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            try
-            {
-                ChengetEmployee.Name = textBox1.Text;
-                ChengetEmployee.Surname = textBox2.Text;
-                ChengetEmployee.PassNum = int.Parse(textBox3.Text);
-                ChengetEmployee.Education = enumValue;
-                ChengetEmployee.Age = int.Parse(textBox5.Text);
-                ChengetEmployee.Specialization = textBox4.Text;
-                ChengetEmployee.Position = textBox6.Text;
-                ChengetEmployee.Salary = int.Parse(textBox7.Text);
-                ChengetEmployee.EntryIntoCompany = DateTime.Parse(textBox8.Text);
-                ChengetEmployee.LastAppointment = DateTime.Parse(textBox9.Text);
-            }
-            catch (FormatException)
-            {
-                // Виняток виник, коли властивість Age не може бути перетворена на ціле число
-                _ = MessageBox.Show("Введено недопустиме значення для номера пасорту або зарплатні. Введіть ціле число.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                _ = MessageBox.Show($"Сталася помилка: {ex.Message}", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            Serialization.SerializeObject(ChengetEmployee);
         }
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {

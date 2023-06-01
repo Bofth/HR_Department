@@ -23,6 +23,11 @@ namespace HR_department
             {
                 column.DefaultCellStyle.Font = font;
             }
+            DataGridViewCellStyle cellStyle = new DataGridViewCellStyle(dataGridView1.DefaultCellStyle);
+            cellStyle.Font = new Font("Microsoft Sans Serif", 10, GraphicsUnit.Pixel);
+
+            // Застосовуємо новий стиль до dataGridView1
+            dataGridView1.DefaultCellStyle = cellStyle;
         }
         private void ClouseButton_Click(object sender, EventArgs e)
         {
