@@ -26,6 +26,7 @@ namespace HR_department
             textBox3.Text = employeeInfo.PassNum.ToString();
             comboBox1.Text = employeeInfo.Education.ToString();
             textBox4.Text = employeeInfo.Specialization.ToString();
+            textBox5.Text = employeeInfo.Age.ToString();
             textBox6.Text = employeeInfo.Position.ToString();
             textBox7.Text = employeeInfo.Salary.ToString();
             textBox8.Text = employeeInfo.EntryIntoCompany.ToString();
@@ -54,6 +55,7 @@ namespace HR_department
                 ChengetEmployee.Surname = textBox2.Text;
                 ChengetEmployee.PassNum = int.Parse(textBox3.Text);
                 ChengetEmployee.Education = enumValue;
+                ChengetEmployee.Age = int.Parse(textBox5.Text);
                 ChengetEmployee.Specialization = textBox4.Text;
                 ChengetEmployee.Position = textBox6.Text;
                 ChengetEmployee.Salary = int.Parse(textBox7.Text);
@@ -91,6 +93,26 @@ namespace HR_department
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

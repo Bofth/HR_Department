@@ -12,7 +12,7 @@ namespace HR_department
         [STAThread]
         private static void Main()
         {
-            //MainOfClass.GenTestData();
+            MainOfClass.GenTestData();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Start_Form());

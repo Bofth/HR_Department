@@ -80,5 +80,20 @@ namespace HR_department
                 Top += e.Y - lastPoint.Y;
             }
         }
+
+        private void ListOfEmployers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

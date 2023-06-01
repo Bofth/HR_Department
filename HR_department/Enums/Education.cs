@@ -2,9 +2,9 @@
 {
     public enum Education
     {
-        medium,
-        higherBachelor,
-        higherMaster,
-        professor,
+        Середня,
+        Бакалаврат,
+        Магістратура,
+        Професор,
     }
 }

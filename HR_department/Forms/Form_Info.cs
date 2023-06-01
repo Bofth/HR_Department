@@ -16,10 +16,12 @@ namespace HR_department
         {
             InitializeComponent();
             employees = Serialization.DeserializeObjects();
-            ListOfEmployers.Items.Clear();
-            foreach (Employee employee in employees)
+            dataGridView1.DataSource = employees;
+            Font font = new Font("Arial", 12, FontStyle.Bold);
+
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
-                _ = ListOfEmployers.Items.Add(employee.ToString());
+                column.DefaultCellStyle.Font = font;
             }
         }
         private void ClouseButton_Click(object sender, EventArgs e)
@@ -29,12 +31,19 @@ namespace HR_department
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string selectedEmployeeFull = (string)ListOfEmployers.SelectedItem;
-            Employee selectedEmployee = MainOfClass.GetEmployeeByNum(selectedEmployeeFull, employees);
-            Form_Up_Inform _form_Up_Inform = new Form_Up_Inform(selectedEmployee);
-            _form_Up_Inform.FormClosed += (eventSender, eventArgs) => Show();
-            _form_Up_Inform.Show();
-            Hide();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                Employee selectedEmployee = (Employee)selectedRow.DataBoundItem;
+                Form_Up_Inform _form_Up_Inform = new Form_Up_Inform(selectedEmployee);
+                _form_Up_Inform.FormClosed += (eventSender, eventArgs) => Show();
+                _form_Up_Inform.Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Виберіть користувача для редагування.");
+            }
         }
 
 
@@ -58,6 +67,23 @@ namespace HR_department
         }
 
         private void ListOfEmployers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<Employee> listForDismissal;
+            listForDismissal = MainOfClass.SearchEmploye(textBox1.Text, employees);
+            dataGridView1.DataSource = listForDismissal;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

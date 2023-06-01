@@ -90,25 +90,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Serealization.cs" />
+    <Compile Include="Data\DataAccess.cs" />
     <Compile Include="Enums\Education.cs" />
-    <Compile Include="Forms\Form_Dismissal_ByAge.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_Dismissal_ByAge.Designer.cs">
-      <DependentUpon>Form_Dismissal_ByAge.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Form_Dismissal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form_Dismissal.Designer.cs">
       <DependentUpon>Form_Dismissal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Start_Form.cs">
+    <Compile Include="Forms\Form_Dismissal_ByAge.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Start_Form.Designer.cs">
-      <DependentUpon>Start_Form.cs</DependentUpon>
+    <Compile Include="Forms\Form_Dismissal_ByAge.Designer.cs">
+      <DependentUpon>Form_Dismissal_ByAge.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_Info.cs">
       <SubType>Form</SubType>
@@ -128,28 +122,35 @@
     <Compile Include="Forms\Form_Up_Inform.Designer.cs">
       <DependentUpon>Form_Up_Inform.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Start_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Start_Form.Designer.cs">
+      <DependentUpon>Start_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeContainer.cs" />
     <Compile Include="Models\MainOfClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Form_Dismissal.resx">
+      <DependentUpon>Form_Dismissal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Dismissal_ByAge.resx">
       <DependentUpon>Form_Dismissal_ByAge.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Dismissal.resx">
-      <DependentUpon>Form_Dismissal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Info.resx">
+      <DependentUpon>Form_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_of_chenging.resx" />
+    <EmbeddedResource Include="Forms\Form_Proper.resx">
+      <DependentUpon>Form_Proper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Up_Inform.resx">
       <DependentUpon>Form_Up_Inform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Start_Form.resx">
       <DependentUpon>Start_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Info.resx">
-      <DependentUpon>Form_Info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Proper.resx">
-      <DependentUpon>Form_Proper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +164,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Form_Info.datasource" />
+    <None Include="Properties\DataSources\HR_department.Models.Employee.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

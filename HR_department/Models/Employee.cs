@@ -1,44 +1,46 @@
 ﻿using HR_department.Enums;
 using Newtonsoft.Json;
 using System;
+using System.Xml.Serialization;
 
 namespace HR_department.Models
 {
     public class Employee
     {
-        [JsonProperty("Name")]
+        [XmlElement("Name")]
         public string Name { get; set; }
 
-        [JsonProperty("Surname")]
+        [XmlElement("Surname")]
         public string Surname { get; set; }
 
-        [JsonProperty("Age")]
+        [XmlElement("Age")]
         public int Age { get; set; }
 
-        [JsonProperty("PassNum")]
+        [XmlElement("PassNum")]
         public int PassNum { get; set; }
 
-        [JsonProperty("Education")]
+        [XmlElement("Education")]
         public Education Education { get; set; }
 
-        [JsonProperty("Specialization")]
+        [XmlElement("Specialization")]
         public string Specialization { get; set; }
 
-        [JsonProperty("Salary")]
+        [XmlElement("Salary")]
         public int Salary { get; set; }
 
-        [JsonProperty("Position")]
+        [XmlElement("Position")]
         public string Position { get; set; }
 
-        [JsonProperty("EntryIntoCompany")]
+        [XmlElement("EntryIntoCompany")]
         public DateTime EntryIntoCompany { get; set; }
 
-        [JsonProperty("LastAppointment")]
+        [XmlElement("LastAppointment")]
         public DateTime LastAppointment { get; set; }
 
         public override string ToString()
         {
-            return $"{PassNum},      {Name},     {Surname},     {Age},       {Education},   {Specialization},     {Position},    {Salary},      {EntryIntoCompany.ToShortDateString()},         {LastAppointment.ToShortDateString()}";
+            return $"{PassNum},     {Name},     {Surname},     {Age},   {EntryIntoCompany.ToString("yyyy-MM-dd")},  {LastAppointment.ToString("yyyy-MM-dd")}";
         }
     }
+
 }
